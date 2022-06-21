@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Map Start</title>
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
+    <link type="text/css" rel="stylesheet" href="https://unpkg.com/bootstrap/dist/css/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.css" />
+    <link href="styles/default-style.css" rel="stylesheet">
+
+    <script src="./src/loader.js" type="module"></script>
+</head>
+<body>
+<div id='map'></div>
+<div id="controls">
+    <input id="search-input" class="form-control" placeholder="Location">
+    <button id="search-btn" class="btn btn-outline-light">Search</button>
+    <button id="location-btn" class="btn btn-outline-light" >Current Location</button>
+    <select name="filter" id="filter" class="btn btn-outline-light">
+        <option value="pizza" selected>Pizza</option>
+        <option value="chinese">Chinese</option>
+        <option value="burgers">Burgers</option>
+        <option value="mexican">Mexican</option>
+      </select>
+      <select id="numOfResults" class="btn btn-outline-light">
+        <option value="null" disabled>Results</option>
+        <option value=5>5</option>
+        <option value=10>10</option>
+        <option value=15 selected>15</option>
+        <option value=20>20</option>
+        <option value=50>50</option>
+      </select>
+
+      <div id="mySidepanel" class="sidepanel">
+        <div id="sortBtns">
+        <button id="sortBtn" type="button" class="btn btn-outline-light" >A-Z</button>
+        <!--<button id="costSortBtn" type="button" class="btn btn-outline-light" >Price ↓</button>--><!-- ↓ ↑ -->
+        </div>
+        <div>
+            <a href="#" class="storeMini">
+                <div class="image-wrapper">
+                    <img src="images/100.png" class="storePhotos" alt="placeholder">
+                </div>
+                <div class="storeInfo">
+                    <div>name</div>
+                    <p>address1, zip_code</p>
+                    <p>city, state</p>
+                    <p>is_closed, price</p>
+                </div>
+            </a>
+        </div>
+        <hr>
+        <div><a href="#">Services</a></div>
+        <div><a href="#">Clients</a></div>
+        <div><a href="#">Contact</a></div>
+      </div>
+
+      <div id="myHelpPanel" class="sidepanel">
+          <div>Yelp Resturant Finder</div>
+            <div class="fakes">
+          <input id="fake-input" class="form-control" placeholder="Location" disabled>
+            - Input a valid location here
+        </div>
+        <div class="fakes">
+            <button class="btn btn-outline-light" disabled>Search</button>
+            - Search button to search based whats in the input box
+          </div>
+        <div class="fakes">
+            <button class="btn btn-outline-light" disabled>Current Location</button>
+            - Searches based on current location and filter 
+          </div>
+        <div class="fakes">
+            <select class="btn btn-outline-light" disabled>
+                <option value="pizza" selected>Pizza</option>
+                </select>
+                - Drop down menu containing filters to search by
+          </div>
+        <div class="fakes">
+            <select class="btn btn-outline-light" disabled>
+                <option value="results" selected>Results</option>
+                </select>
+            - Drop down menu which decides how many results you get
+          </div>
+        <div class="fakes">
+            <button class="btn btn-outline-light" disabled>&#9776; Toggle Sidepanel</button>
+            - Button to toggle the visiblity of the sidebar
+          </div>
+        <div class="fakes">
+            <button class="btn btn-outline-light" disabled>Reset</button>
+            - Button to clear local storage and clear the sidebar
+          </div>
+      </div>
+
+
+      <button id="sideBarBtn" class="btn btn-outline-light">&#9776; Toggle Sidepanel</button>
+      <button id="reset-btn" class="btn btn-outline-light" >Reset</button>
+      <button id="help-btn" class="btn btn-outline-light" >?</button>
+
+      
+    <!--
+    <button id="btn1">RIT @ Zoom 15.5</button>
+    <button id="btn2">RIT @ Isometric View</button>
+    <button id="btn3">World @ Zoom 0</button>
+    <button id="btn4">IGM @ Zoom 8</button>
+    <button id="btn5">Load some markers</button>
+        -->
+</div>
+
+</body>
+</html>

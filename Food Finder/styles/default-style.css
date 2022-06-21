@@ -1,0 +1,234 @@
+  option {
+    color: #111;
+  }
+  
+  .marker {
+    background-image: url('../images/mapbox-icon.png');
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  .mapboxgl-popup {
+    max-width: 200px;
+  }
+  
+  body{
+    background-color: 	#202020;
+  }
+
+  html,
+  body,
+  #map{
+    width: 100%;
+    height: 100%;
+  }
+
+  .mapboxgl-popup-content {
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+  }
+  
+
+  .poi {
+    background-image: url('../images/mapbox-icon.png');
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  .poi {
+    max-width: 200px;
+  }
+  
+  .poi {
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  button{
+    background-color: lightgray;
+    white-space: nowrap;
+
+  }
+
+  #controls{
+    position: absolute;
+    display: flex;
+    z-index: 1;
+    top: 20px;
+    left: 20px;
+    height:120px;
+    /*
+    width:130px;
+    background-color: lightgray;
+    border: 1px solid black;
+    */
+    height: auto;
+  }
+  #controls > *{
+    margin: 10px;
+  }
+/*
+  #controls button{
+    font-size: .9em;
+    width: 100%;
+    background-color: hsl(195,100%, 50%);
+  }
+
+  #controls button:hover{
+    color: #777;
+    background-color: hsl(195,100%, 60%);
+  }*/
+
+  /* The sidepanel menu https://www.w3schools.com/howto/howto_js_collapse_sidepanel.asp */
+.sidepanel {
+  height: 600px; /* Specify a height */
+  width: 450px; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  padding-top: 5px;
+  top: 100px;
+  right: 40px;
+  background-color: #111; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidepanel */
+}
+
+
+#myHelpPanel{
+left:40px;
+text-decoration: none;
+padding-top: 0px;
+font-size: 25px;
+color: #818181;
+display: block;
+transition: 0.3s;
+}
+
+/* The sidepanel links */
+.sidepanel a {
+  padding: 8px 0px 8px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+#fake-input{
+  width: 100px;
+}
+#fake-input{
+  display: inline-block;
+}
+.fakes{
+  padding-top: 20px;
+  font-size: 20px;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidepanel a:hover {
+  color: #f1f1f1;
+}
+
+.storeInfo p{
+font-size: 12px;
+margin-block: .5rem;
+}
+
+hr{
+  background-color: #818181;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.storeInfo {
+  display: inline-block;
+}
+
+.image-wrapper{
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* Position and style the close button (top right corner) */
+.sidepanel .closebtn {
+  position: absolute;
+  padding: 0px;
+  top: 0;
+  left: -25px;
+  width: 25px;
+  font-size: 36px;
+}
+
+.sidepanel #sortBtn{
+  /*position: absolute;*/
+  width: 110px;
+  top: 10px;
+  left:175px;
+}
+.sidepanel .btn{
+  margin-left: 10px;
+  margin-left: 10px;
+}
+
+
+/* Style the button that is used to open the sidepanel */
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding-left: 10px ;
+  padding-right: 10px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+.storePhotos{
+  padding: 10px;
+  padding-left: 0px;
+  width: 100px;
+  height: 100px;
+}
+
+.storeMini{
+  vertical-align: middle;
+}
+
+#sortBtns
+{
+  display: flex;
+  align-content: center;
+  z-index: 1;
+  width: 100%;
+  flex-wrap: nowrap;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+}
